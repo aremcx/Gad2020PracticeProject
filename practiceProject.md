@@ -43,16 +43,12 @@ gcloud compute --project=qwiklabs-gcp-02-2b12045889b9 firewall-rules create defa
 Task 4: Create the Cloud SQL instance
 In the GCP Console
      step 1. 
-     gcloud compute 
-     
-     
-     
-     
-    
+         `gcloud sql instances create blog-db --database-version=MYSQL_5_7 --tier=db-n1-standard-1 --region=us-central1 --root-password=password123` 
+                   
 Task 5: Configure an application in a Compute Engine instance to use Cloud SQL
  Step 1. click Compute Engine > VM instances.
  Step 2. In the VM instances list, click SSH in the row for your VM instance bloghost.
-                'gcloud compute -vm --instances list
+                'gcloud compute -vm --instances list`
                 
  Step 3. In your ssh session on bloghost, change your working directory to the document root of the web server:
        'cd /var/www/html'
